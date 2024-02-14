@@ -14,7 +14,7 @@ axios(url)
     const articles = [];
 
     $('.article', html).each(function() {
-        const title = $(this).text();
+        const title = $(this).text().split('\n')[0];
         const url = $(this).find('a').attr('href');
         articles.push({
             title,
